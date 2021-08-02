@@ -90,3 +90,36 @@ def main():
 
                     print("Select an option below to continue: Enter sc, ac, dc, sc or lo")
                     print('\n')
+                    
+                    while True:
+                        print("sc: Saved credentials")
+                    print("ac: Add new credentials")
+                    print("dc: Delete credentials")
+                    print("sc: Search credentials")
+                    print("lo: Log Out")
+                    option = input()
+
+                    if option == 'ac':
+                        while True:
+                            print("Continue to add? y/n")
+
+                            choice = input().lower()
+                            if choice == 'y':
+                                print("Enter The Account Name")
+                                account_name = input()
+                                print("Enter a password")
+                                print(
+                                    "To generate random password enter keyword 'gp' or 'n' to create your own password")
+                                keyword = input().lower()
+                                if keyword == 'gp':
+                                    source = string.ascii_letters + string.digits
+                                    account_password = ''.join((random.choice(source) for i in range(8)))
+                                    print(f"Account: {account_name}")
+                                    print(f"Password: {account_password}")
+                                    print('\n')
+                                elif keyword == 'n':
+                                    print("Create your password")
+                                    account_password = input()
+                                    print(f"Account: {account_name}")
+                                    print(f"Password: {account_password}")
+                                    print('\n')
