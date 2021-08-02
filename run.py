@@ -38,3 +38,55 @@ def delete_credential(credentials):
     Method that deletes credentials
     """
     return Credentials.delete_credential(credentials)
+def main():
+    
+    while True:
+        print('''
+
+             Welcome to Password Locker
+    An Easy and Simple Application for Storing your 
+             Password  Locally Via Terminal
+
+  ''')
+        print('\n')
+        print("Use  short codes to select an option: Create New User use 'cu': Login to your account use 'lg' or 'ex' to exit password locker")
+        short_code = input().lower()
+        print('\n')
+
+        if short_code == 'cu':
+            print("Create a UserName")
+            created_user_name = input()
+
+            print("Enter Password")
+            created_user_password = input()
+
+            print("Confirm  Password")
+            confirm_password = input()
+
+            while confirm_password != created_user_password:
+                print("Sorry your passwords did not match!")
+                print("Please enter the correct password")
+                created_user_password = input()
+                print("Confirm Your Password")
+                confirm_password = input()
+            else:
+                print(f"Congratulations! {created_user_name}! You have created your new account.")
+                print('\n')
+                print("Proceed to Log In to your Account")
+                print("Username")
+                entered_userName = input()
+                print("Your Password")
+                entered_password = input()
+
+                while entered_userName != created_user_name or entered_password != created_user_password:
+                    print("Wrong username or password")
+                    print("Username")
+                    entered_userName = input()
+                    print("Your Password")
+                    entered_password = input()
+                else:
+                    print(f"Welcome!: {entered_userName} to your Account")
+                    print('\n')
+
+                    print("Select an option below to continue: Enter sc, ac, dc, sc or lo")
+                    print('\n')
