@@ -19,3 +19,12 @@ def save_new_credential(credentials):
 def find_credential(account_name):
     """Function that finds credentials based on account_name given"""
     return Credentials.find_by_name(account_name)
+
+def find_credential(account_name):
+    """Function that finds credentials based on account_name given"""
+    return Credentials.find_by_name(account_name)
+
+
+def check_existing_credentials(name):
+    """Method that checks whether a particular account and its credentials exist based on searched account_name"""
+    return Credentials.find_by_name(name)
