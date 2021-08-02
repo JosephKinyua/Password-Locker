@@ -9,5 +9,15 @@ def __init__(self, account_name, account_password):
 credentials_list = []
 
 def save_credentials(self):
-        """Method that saves credential objects into credentials_list"""
+        """
+        Method that saves credential objects into credentials_list
+        
+        """
         self.credentials_list.append(self)
+        
+        def delete_credential(self):
+            """
+            Method which deletes a particular credential
+            
+            """
+        Credentials.credentials_list.remove(self)
