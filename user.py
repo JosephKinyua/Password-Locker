@@ -16,3 +16,5 @@ def save_user(self):
     
     """
     self.user_list.append(self)
+if __name__ ==  '__main__':
+    main()
