@@ -15,14 +15,14 @@ class TestCredentials(unittest.TestCase):
         Set up method to run  before each test case
         
         """
-        self.new_credentials = Credentials("Facebook", "6789")
+        self.new_credentials = Credentials("Instagram", "6789")
 
     def test_credentials_instance(self):
         """ 
         Tests whether the new_credentials have been instantiated correctly
         
         """
-        self.assertEqual(self.new_credentials.account_name, "Facebook")
+        self.assertEqual(self.new_credentials.account_name, "Instagram")
         self.assertEqual(self.new_credentials.account_password, "6789")
 
     def test_save_credentials(self):
@@ -41,7 +41,7 @@ class TestCredentials(unittest.TestCase):
         
         """
         self.new_credentials.save_credentials()
-        new_test_credential = Credentials("Twitter", "56789")
+        new_test_credential = Credentials("LinkedIn", "56789")
         new_test_credential.save_credentials()
         self.assertEqual(len(Credentials.credentials_list), 2)
 
@@ -60,10 +60,10 @@ class TestCredentials(unittest.TestCase):
         
         """
         self.new_credentials.save_credentials()
-        new_test_credential = Credentials("Twitter", "56789")
+        new_test_credential = Credentials("LinkedIn", "56789")
         new_test_credential.save_credentials()
 
-        found_credential = Credentials.find_by_name("Twitter")
+        found_credential = Credentials.find_by_name("LinkedIn")
 
         self.assertEqual(found_credential.account_name, new_test_credential.account_name)
 
