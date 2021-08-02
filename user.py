@@ -1,5 +1,7 @@
 class User:
-    """Create class for users
+    """
+    Create class for users
+    
     """
 
     def __init__(self, user_name, password):
@@ -8,7 +10,10 @@ class User:
     user_list = []
 
     def save_user(self):
-        """Method that saves user objects into user_list"""
+        """
+        Method that saves user objects into user_list
+        
+        """
         self.user_list.append(self)
 
 
