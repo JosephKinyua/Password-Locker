@@ -9,23 +9,39 @@ import string
 
 
 def create_new_credential(account_name, account_password):
-    """Function to create a new account and its credentials"""
+    """
+    
+    Function to create a new account and its credentials
+    
+    """
     new_credential = Credentials(account_name, account_password)
     return new_credential
 
 
 def save_new_credential(credentials):
-    """Function to save the newly created account and password"""
+    """
+    
+    Function to save the newly created account and password
+    
+    """
     credentials.save_credentials()
 
 
 def find_credential(account_name):
-    """Function that finds credentials based on account_name given"""
+    """
+    
+    Function that finds credentials based on account_name given
+    
+    """
     return Credentials.find_by_name(account_name)
 
 
 def check_existing_credentials(name):
-    """Method that checks whether a particular account and its credentials exist based on searched account_name"""
+    """
+    
+    Checks whether a particular account and its credentials exist based on searched account_name
+    
+    """
     return Credentials.find_by_name(name)
 
 
@@ -52,7 +68,7 @@ def main():
 
   ''')
         print('\n')
-        print("Use  short codes to select an option: Create New User use 'cu': Login to your account use 'lg' or 'ex' to exit password locker")
+        print("Select an option using short codes: Create New User use 'cu': Login to your account use 'lg' or 'ex' to exit password locker")
         short_code = input().lower()
         print('\n')
 
@@ -146,7 +162,7 @@ def main():
 
                             else:
                                 print('\n')
-                                print("You don't seem to have any contacts yet")
+                                print("You don't  have any contacts yet")
                                 print('\n')
 
                             print("Back to Menu? y/n")
@@ -161,7 +177,7 @@ def main():
                                 continue
 
                     elif option == 'lo':
-                        print("WARNING! You will loose all your credentials if you log out. Are you sure? y/n")
+                        print("Warning! You will loose all your credentials if you log out. Are you sure? y/n")
                         logout = input().lower()
 
                         if logout == 'y':
@@ -182,7 +198,7 @@ def main():
                                 sure = input().lower()
                                 if sure == 'y':
                                     delete_credential(search_credential)
-                                    print("Account SUCCESSFULLY deleted")
+                                    print("Account successfully deleted")
                                     break
                                 elif sure == 'n':
                                     continue
@@ -236,7 +252,7 @@ def main():
             if default_user_name == 'testuser' and default_user_password == '12345':
                 print("You have successfully signed up!")
                 print('\n')
-                print("Select an option below to continue: Enter 1, 2, 3, 4 or 5")
+                print("Select an option below to continue: Enter sc, ac, dc, sc or lo")
                 print('\n')
 
             while True:
@@ -304,12 +320,9 @@ def main():
                             continue
                         else:
                             print("Please Enter a valid code")
-                        # elif choice1 == 'n':
-                        #     break
-                        # else:
-                        #     print("Please use y or n")
+                    
                 elif option == 'lo':
-                    print("WARNING! You will loose all your credentials if you log out. Are you sure? y/n")
+                    print("Warning! You will loose all your credentials if you log out. Are you sure? y/n")
                     logout = input().lower()
 
                     if logout == 'y':
