@@ -49,3 +49,7 @@ def find_by_name(cls, account_name):
                 return True
         return False
 
+ @classmethod
+    def display_credentials(cls):
+        """Method which displays all current credentials"""
+        return cls.credentials_list
