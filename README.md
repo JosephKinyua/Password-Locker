@@ -22,10 +22,7 @@ There is no any bug issue.
 ## Support and contact details
 For any query you can reach me vai email kinyuajoseph2014@gmail.com
 
-## Live link
-``````
 
-``````
 ### License
 [MIT Licence](https://choosealicense.com/licenses/mit/)
 Copyright (c) 2021 Joseph Nyaga.
